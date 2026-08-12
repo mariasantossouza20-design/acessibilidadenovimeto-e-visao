@@ -1,0 +1,69 @@
+/* 1. RESET E CORES DE ALTO CONTRASTE (Atende baixa visão) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a; /* Contraste superior a 4.5:1 */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. LINK DE SALTO OCULTO (Aparece apenas quando o usuário aperta 'Tab') */
+.link-salto {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+    transition: top 0.2s;
+}
+
+.link-salto:focus {
+    top: 0; /* Brota na tela quando ganha o foco do teclado */
+}
+
+/* 3. NAVEGAÇÃO E LINKS */
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: #1a1a1a;
+    padding: 15px;
+    margin: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* 4. INDICADOR DE FOCO VISÍVEL E FORTE (Crucial para mobilidade reduzida) */
+nav a:focus,
+.btn-acao:focus {
+    outline: 4px solid #ffcc00; /* Borda amarela grossa e chamativa */
+    outline-offset: 2px;
+    background-color: #333333;
+}
+
+/* 5. ESTILO DO BOTÃO ACESSÍVEL */
+.btn-acao {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.btn-acao:hover {
+    background-color: #004085;
+}
