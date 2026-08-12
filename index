@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Acessível - Movimentação e Visão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. LINK DE SALTO: Permite que usuários de teclado pulem o menu direto para o conteúdo -->
+    <a href="#conteudo-principal" class="link-salto">Pular para o conteúdo principal</a>
+
+    <!-- 2. NAVEGAÇÃO SEMÂNTICA: Tag correta para leitores de tela identificarem o menu -->
+    <header>
+        <nav aria-label="Menu Principal">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 3. CONTEÚDO PRINCIPAL: Uso de H1 a H3 em ordem lógica para navegação estruturada -->
+    <main id="conteudo-principal">
+        
+        <section id="home">
+            <h1>Acessibilidade Digital Aplicada</h1>
+            
+            <!-- Imagem com texto alternativo claro para deficientes visuais -->
+            <img src="diagrama-acessibilidade.png" alt="Fluxograma mostrando a interação entre um usuário de teclado e um leitor de tela acessando um site.">
+            
+            <p>Esta interface foi projetada para responder perfeitamente aos comandos de voz, leitores de tela e navegação por teclado.</p>
+            
+            <!-- Botão nativo: já vem com suporte a teclado (Enter/Espaço) por padrão -->
+            <button class="btn-acao">Ativar Recurso</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto Acessível. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
